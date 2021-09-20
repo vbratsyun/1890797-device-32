@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
-* Студент: [Виктория bratsyun](https://up.htmlacademy.ru/htmlcss/32/user/1890797).
-* Наставник: `Неизвестно`.
+- Студент: [Виктория bratsyun](https://up.htmlacademy.ru/htmlcss/32/user/1890797).
+- Наставник: `Владислав Зубко`.
 
 ---
 
