@@ -17,7 +17,7 @@ body {
   background-color: #f0f0f0;
 }
 .services {
-  background-image: url(../img/delivery.svg);
+  background-image: url("../img/delivery.svg");
   background-repeat: no-repeat;
   background-position-x: 60%; /*для примера сместила пока декоративную картинку немного вправо*/
 }
