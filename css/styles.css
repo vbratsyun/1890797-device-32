@@ -1,0 +1,264 @@
+@font-face {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/rubik/rubik-800.woff2") format("woff2");
+  font-display: swap;
+}
+
+/* Стили для html.html */
+
+body {
+  font-family: Rubik, sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  color: #444444;
+  background-color: #ffffff;
+}
+.page-header,
+.user-navigation-link,
+.main-navigation-link {
+  color: #000000;
+  background-color: #ffe17f;
+  text-decoration: none;
+}
+.user-navigation-list,
+.main-navigation-list,
+.category-product-list,
+.services-list,
+.contact-schedule-list,
+.footer-list,
+.breadcrumbs-list,
+.catalog-filter-list,
+.pagination-list {
+  list-style: none;
+}
+.user-navigation-item:first-child {
+  opacity: 0.3;
+}
+.main-navigation-link,
+.footer-navigation-link {
+  font-family: Raleway, sans-serif;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.slider-position {
+  font-weight: 800;
+  font-size: 180px;
+  text-align: right;
+  color: #ffffff;
+  background-color: #ffe17f;
+  /* height: 323px; цифра на фоне*/
+}
+.slider-slogan,
+.services-link-title,
+.about-us-title,
+.contact-title,
+.subscription-title,
+.inner-header-title {
+  font-family: Raleway, sans-serif;
+  font-size: 50px;
+  line-height: 50px;
+  color: #000000;
+}
+.button {
+  font-family: Raleway, sans-serif;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-align: center;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  color: #000000;
+}
+.product-row-title {
+  font-size: 36px;
+  color: #000000;
+}
+.product-row-data {
+  font-size: 16px;
+}
+.category-product-item {
+  background-color: #ffe17f;
+}
+.product-item-link,
+.product-card-link,
+.pagination-link {
+  text-decoration: none;
+}
+.category-product-title {
+  font-family: Raleway, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  color: #000000;
+}
+.services,
+.delivery-product-button,
+.subscription {
+  color: #000000;
+  background-color: #f0f0f0;
+}
+.services {
+  background-image: url("../img/delivery.svg");
+  background-repeat: no-repeat;
+  background-position-x: 60%; /*для примера сместила пока декоративную картинку немного вправо*/
+}
+.delivery-product-button {
+  font-family: Raleway, sans-serif;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.about-us-list > li {
+  color: #ffc700;
+}
+.about-us-item {
+  font-weight: 700;
+  line-height: 20px;
+  color: #000000;
+}
+.contacts-subtitle {
+  font-weight: 700;
+  font-size: 24px;
+}
+.contact-address,
+.footer-address {
+  font-style: normal;
+}
+.contacts-phone {
+  color: #444444;
+}
+.subscription-form-input {
+  font-family: Rubik, sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  color: #444444;
+  opacity: 0.5;
+}
+.subscription-button {
+  font-size: 18px;
+}
+.subscription-label {
+  color: #444444;
+}
+.page-footer {
+  color: #ffffff;
+  background-color: #444444;
+}
+.footer-text {
+  font-size: 16px;
+  line-height: 19px;
+}
+.footer-text-phone {
+  font-size: 16px;
+  text-align: right;
+}
+.footer-navigation-link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Стили для catalog.html */
+.catalog-filter,
+.sorting-type,
+.pagination-list {
+  color: #000000;
+  background-color: #ebebeb;
+}
+.breadcrumbs-item-link,
+.catalog-filter-head,
+.control-label,
+.sorting-type-title,
+.pagination-text,
+.button-show-more {
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+.breadcrumbs-item-link {
+  text-decoration: none;
+  opacity: 0.6;
+}
+.catalog-filter-head {
+  font-family: Raleway, sans-serif;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background-color: #dcdcdc;
+}
+.catalog-filter {
+  background: #ebebeb;
+}
+
+.catalog-filter-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  color: #000000;
+  text-transform: capitalize;
+}
+.range-text {
+  font-size: 15px;
+  line-height: 18px;
+  color: #000000;
+  opacity: 0.3;
+}
+.pagination-list {
+  background-color: #ebebeb;
+}
+.sorting-type-title,
+.pagination-text {
+  font-family: Raleway, sans-serif;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.product-card-title {
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  color: #000000;
+  text-decoration: none;
+}
+.product-card-price {
+  line-height: 21px;
+  text-align: right;
+}
+.button-show-more {
+  text-transform: uppercase;
+  text-align: center;
+  border: 3px solid #000000 0.1;
+  box-sizing: border-box;
+}
+.pagination-number {
+  font-family: Rubik, sans-serif;
+  font-weight: normal;
+  text-align: center;
+  color: #444444;
+  opacity: 0.3;
+}
