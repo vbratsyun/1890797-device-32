@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>HTML Academy: Девайс</title>
-    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
     <!-- Вводная часть сайта -->
@@ -18,31 +18,33 @@
       </a>
       <ul class="user-navigation-list">
         <li class="user-navigation-item">
-          <input type="text" placeholder="Поиск по сайту" />
+          <a class="user-navigation-link" href="#">Поиск по сайту</a>
         </li>
         <li class="user-navigation-item">
-          <a class="navigation-link" href="#">Войти</a>
+          <a class="user-navigation-link" href="#">Войти</a>
         </li>
         <li class="user-navigation-item">
-          <a class="navigation-link" href="#">Сравнить</a>
+          <a class="user-navigation-link" href="#">Сравнить</a>
         </li>
         <li class="user-navigation-item">
-          <a class="navigation-link" href="#">Корзина</a>
+          <a class="user-navigation-link" href="#">Корзина</a>
         </li>
       </ul>
       <nav class="main-navigation">
         <ul class="main-navigation-list">
           <li class="main-navigation-item">
-            <a class="navigation-link" href="catalog.html">Каталог товаров</a>
+            <a class="main-navigation-link" href="catalog.html"
+              >Каталог товаров</a
+            >
           </li>
           <li class="main-navigation-item">
-            <a class="navigation-link" href="#">Доставка</a>
+            <a class="main-navigation-link" href="#">Доставка</a>
           </li>
           <li class="main-navigation-item">
-            <a class="navigation-link" href="#">Гарантия</a>
+            <a class="main-navigation-link" href="#">Гарантия</a>
           </li>
           <li class="main-navigation-item">
-            <a class="navigation-link" href="#">Контакты</a>
+            <a class="main-navigation-link" href="#">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -93,11 +95,11 @@
           </li>
         </ul>
         <table class="characteristic-product">
-          <tr class="product-row">
-            <th class="product-row-title">800 м</th>
-            <th class="product-row-title">50 м</th>
+          <tr class="product-row-title">
+            <td>800 м</td>
+            <td>50 м</td>
           </tr>
-          <tr class="product-row">
+          <tr class="product-row-data">
             <td>Дальность полета</td>
             <td>Радиус поражения</td>
           </tr>
@@ -116,7 +118,7 @@
                 height="55"
                 alt="Первая иконка группы товаров"
               />
-              <h4>Виртуальная реальность</h4>
+              <h4 class="category-product-title">Виртуальная реальность</h4>
             </a>
           </li>
           <li class="category-product-item">
@@ -127,7 +129,7 @@
                 height="117"
                 alt="Вторая иконка группы товаров"
               />
-              <h4>Моноподы для селфи</h4>
+              <h4 class="category-product-title">Моноподы для селфи</h4>
             </a>
           </li>
           <li class="category-product-item">
@@ -138,7 +140,7 @@
                 height="87"
                 alt="Третья иконка группы товаров"
               />
-              <h4>Экшн-камеры</h4>
+              <h4 class="category-product-title">Экшн-камеры</h4>
             </a>
           </li>
           <li class="category-product-item">
@@ -149,7 +151,7 @@
                 height="65"
                 alt="Четвертая иконка группы товаров"
               />
-              <h4>Фитнес-браслеты</h4>
+              <h4 class="category-product-title">Фитнес-браслеты</h4>
             </a>
           </li>
           <li class="category-product-item">
@@ -160,7 +162,7 @@
                 height="98"
                 alt="Пятая иконка группы товаров"
               />
-              <h4>Умные часы</h4>
+              <h4 class="category-product-title">Умные часы</h4>
             </a>
           </li>
           <li class="category-product-item">
@@ -171,7 +173,7 @@
                 height="69"
                 alt="Шестая иконка группы товаров"
               />
-              <h4>Квадрокоптеры</h4>
+              <h4 class="category-product-title">Квадрокоптеры</h4>
             </a>
           </li>
         </ul>
@@ -216,9 +218,9 @@
             транспортными компаниями:
           </p>
           <ul class="about-us-list">
-            <li class="about-us-item">Меловые линии</li>
-            <li class="about-us-item">СДИК</li>
-            <li class="about-us-item">ТоксБерри</li>
+            <li><span class="about-us-item">Меловые линии</span></li>
+            <li><span class="about-us-item">СДИК</span></li>
+            <li><span class="about-us-item">ТоксБерри</span></li>
           </ul>
           <p><a class="button about-us-button" href="#">Подробнее о нас</a></p>
         </section>
@@ -270,12 +272,13 @@
           <button class="button subscription-button" type="submit">
             <span class="visually-hidden">Подписаться</span>
           </button>
-          <label
+          <label class="subscription-label"
             ><input
               class="subscription-checkbox"
               type="checkbox"
               name="free"
               checked
+              disabled
             />Это бесплатно</label
           >
         </form>
@@ -311,7 +314,7 @@
           </li>
         </ul>
         <address class="footer-address">
-          <p class="footer-text">+7 (812) 812-12-12</p>
+          <p class="footer-text-phone">+7 (812) 812-12-12</p>
         </address>
       </section>
       <section class="footer-social">

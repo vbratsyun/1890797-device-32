@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Страница каталога</title>
-    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
     <!-- Вводная часть сайта -->
@@ -12,38 +12,39 @@
         <img
           class="header-logo-image"
           src="img/logo/logo-header.svg"
-          width="145"
-          height="36"
+          width="146"
           alt="Логотип интернет-магазина 'Device'"
         />
       </a>
       <ul class="user-navigation-list">
         <li class="user-navigation-item">
-          <input type="text" placeholder="Поиск по сайту" />
+          <a class="user-navigation-link" href="#">Поиск по сайту</a>
         </li>
         <li class="user-navigation-item">
-          <a class="navigation-link" href="#">Войти</a>
+          <a class="user-navigation-link" href="#">Войти</a>
         </li>
         <li class="user-navigation-item">
-          <a class="navigation-link" href="#">Сравнить</a>
+          <a class="user-navigation-link" href="#">Сравнить</a>
         </li>
         <li class="user-navigation-item">
-          <a class="navigation-link" href="#">Корзина</a>
+          <a class="user-navigation-link" href="#">Корзина</a>
         </li>
       </ul>
       <nav class="main-navigation">
         <ul class="main-navigation-list">
           <li class="main-navigation-item">
-            <a class="navigation-link" href="catalog.html">Каталог товаров</a>
+            <a class="main-navigation-link" href="catalog.html"
+              >Каталог товаров</a
+            >
           </li>
           <li class="main-navigation-item">
-            <a class="navigation-link" href="#">Доставка</a>
+            <a class="main-navigation-link" href="#">Доставка</a>
           </li>
           <li class="main-navigation-item">
-            <a class="navigation-link" href="#">Гарантия</a>
+            <a class="main-navigation-link" href="#">Гарантия</a>
           </li>
           <li class="main-navigation-item">
-            <a class="navigation-link" href="#">Контакты</a>
+            <a class="main-navigation-link" href="#">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -52,12 +53,22 @@
       <header class="inner-header">
         <h1 class="inner-header-title">Моноподы для селфи</h1>
         <ul class="breadcrumbs-list">
-          <li class="breadcrumbs-item"><a href="index.html">Главная</a></li>
           <li class="breadcrumbs-item">
-            <a href="index.html">Каталог товаров</a>
+            <a class="breadcrumbs-item-link" href="index.html">Главная</a>
+            <button class="slider-button slider-next">
+              <span class="visually-hidden">Подраздел</span>
+            </button>
           </li>
           <li class="breadcrumbs-item">
-            <a>Моноподы для селфи</a>
+            <a class="breadcrumbs-item-link" href="index.html"
+              >Каталог товаров</a
+            >
+            <button class="slider-button slider-next">
+              <span class="visually-hidden">Подраздел</span>
+            </button>
+          </li>
+          <li class="breadcrumbs-item">
+            <a class="breadcrumbs-item-link">Моноподы для селфи</a>
           </li>
         </ul>
       </header>
@@ -69,7 +80,7 @@
           action="https://echo.htmlacademy.ru/"
           method="get"
         >
-          <p class="catalog-filter-title">Фильтр</p>
+          <p class="catalog-filter-head">Фильтр</p>
           <fieldset class="catalog-filter-group">
             <!-- Ползунки -->
             <legend class="catalog-filter-title">Стоимость</legend>
@@ -79,13 +90,13 @@
             <button class="range-toggle toggle-max" type="button">
               <span class="visually-hidden">Изменить максимальную цену</span>
             </button>
-            <label
+            <label class="range-text"
               >от<input
                 class="catalog-filter-input"
                 type="number"
                 name="min-price"
             /></label>
-            <label
+            <label class="range-text"
               >до<input
                 class="catalog-filter-input"
                 type="number"
@@ -265,37 +276,37 @@
         <ul class="pagination-list">
           <li class="pagination-item">
             <a class="pagination-link pagination-prev pagination-disabled">
-              <span>Назад</span>
+              <span class="pagination-text">Назад</span>
             </a>
           </li>
           <li class="pagination-item">
             <a class="pagination-link" href="#">
-              <span>1</span>
+              <span class="pagination-number">1</span>
             </a>
           </li>
           <li class="pagination-item">
             <a class="pagination-link" href="#">
-              <span>2</span>
+              <span class="pagination-number">2</span>
             </a>
           </li>
           <li class="pagination-item">
             <a class="pagination-link" href="#">
-              <span>3</span>
+              <span class="pagination-number">3</span>
             </a>
           </li>
           <li class="pagination-item">
             <a class="pagination-link" href="#">
-              <span>...</span>
+              <span class="pagination-number">...</span>
             </a>
           </li>
           <li class="pagination-item">
             <a class="pagination-link" href="#">
-              <span>15</span>
+              <span class="pagination-number">15</span>
             </a>
           </li>
           <li class="pagination-item">
             <a class="pagination-link pagination-next" href="#">
-              <span>Вперед</span>
+              <span class="pagination-text">Вперед</span>
             </a>
           </li>
         </ul>
@@ -331,7 +342,7 @@
           </li>
         </ul>
         <address class="footer-address">
-          <p class="footer-text">+7 (812) 812-12-12</p>
+          <p class="footer-text-phone">+7 (812) 812-12-12</p>
         </address>
       </section>
       <section class="footer-social">
@@ -359,7 +370,7 @@
           class="footer-logo-image htmlacademy-image"
           src="img/logo/logo-htmlacademy.svg"
           width="115"
-          height="33"
+          height="34"
           alt="Логотип разработчиков сайта"
         />
       </a>
