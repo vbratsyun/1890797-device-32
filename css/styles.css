@@ -30,7 +30,7 @@
 /* Стили для html.html */
 
 body {
-  font-family: Rubik, sans-serif;
+  font-family: Rubik, Arial, Helvetica, sans-serif;
   font-size: 18px;
   line-height: 30px;
   color: #444444;
@@ -58,8 +58,23 @@ body {
   opacity: 0.3;
 }
 .main-navigation-link,
+.footer-navigation-link,
+.slider-slogan,
+.services-link-title,
+.about-us-title,
+.contact-title,
+.subscription-title,
+.inner-header-title,
+.button,
+.category-product-title,
+.delivery-product-button,
+.catalog-filter-head,
+.sorting-type-title,
+.pagination-text {
+  font-family: Raleway, Helvetica, Arial, sans-serif;
+}
+.main-navigation-link,
 .footer-navigation-link {
-  font-family: Raleway, sans-serif;
   line-height: 21px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -78,13 +93,11 @@ body {
 .contact-title,
 .subscription-title,
 .inner-header-title {
-  font-family: Raleway, sans-serif;
   font-size: 50px;
   line-height: 50px;
   color: #000000;
 }
 .button {
-  font-family: Raleway, sans-serif;
   line-height: 21px;
   letter-spacing: 0.2em;
   text-align: center;
@@ -109,7 +122,6 @@ body {
   text-decoration: none;
 }
 .category-product-title {
-  font-family: Raleway, sans-serif;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: -0.02em;
@@ -128,7 +140,6 @@ body {
   background-position-x: 60%; /*для примера сместила пока декоративную картинку немного вправо*/
 }
 .delivery-product-button {
-  font-family: Raleway, sans-serif;
   font-size: 20px;
   line-height: 23px;
   text-align: center;
@@ -155,10 +166,7 @@ body {
   color: #444444;
 }
 .subscription-form-input {
-  font-family: Rubik, sans-serif;
-  font-size: 18px;
-  line-height: 30px;
-  color: #444444;
+  font: inherit;
   opacity: 0.5;
 }
 .subscription-button {
@@ -206,7 +214,6 @@ body {
   opacity: 0.6;
 }
 .catalog-filter-head {
-  font-family: Raleway, sans-serif;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   background-color: #dcdcdc;
@@ -234,7 +241,6 @@ body {
 }
 .sorting-type-title,
 .pagination-text {
-  font-family: Raleway, sans-serif;
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
@@ -256,8 +262,7 @@ body {
   box-sizing: border-box;
 }
 .pagination-number {
-  font-family: Rubik, sans-serif;
-  font-weight: normal;
+  font: inherit;
   text-align: center;
   color: #444444;
   opacity: 0.3;
