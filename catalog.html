@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Страница каталога</title>
+    <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body>
     <!-- Вводная часть сайта -->
@@ -10,7 +11,9 @@
       <a class="header-logo" href="https://htmlacademy.ru/">
         <img
           class="header-logo-image"
-          src="#"
+          src="img/logo/logo-header.svg"
+          width="145"
+          height="36"
           alt="Логотип интернет-магазина 'Device'"
         />
       </a>
@@ -66,6 +69,7 @@
           action="https://echo.htmlacademy.ru/"
           method="get"
         >
+          <p class="catalog-filter-title">Фильтр</p>
           <fieldset class="catalog-filter-group">
             <!-- Ползунки -->
             <legend class="catalog-filter-title">Стоимость</legend>
@@ -204,29 +208,53 @@
           <span class="visually-hidden">Сортировать по убыванию</span>
         </a>
         <div class="product-card">
-          <a class="product-card-link" href="#">
-            <img class="product-card-image" src="" alt="" />
+          <a class="product-card-link product-card-active" href="#">
+            <img
+              class="product-card-image"
+              src="img/products/product-1.jpg"
+              width="360"
+              height="380"
+              alt=""
+            />
             <h3 class="product-card-title">Любительская селфи-палка</h3>
           </a>
           <p class="product-card-price">500 ₽</p>
         </div>
         <div class="product-card">
           <a class="product-card-link" href="#">
-            <img class="product-card-image" src="" alt="" />
+            <img
+              class="product-card-image"
+              src="img/products/product-2.jpg"
+              width="360"
+              height="380"
+              alt=""
+            />
             <h3 class="product-card-title">Профессиональная селфи-палка</h3>
           </a>
           <p class="product-card-price">1 500 ₽</p>
         </div>
         <div class="product-card">
           <a class="product-card-link" href="#">
-            <img class="product-card-image" src="" alt="" />
+            <img
+              class="product-card-image"
+              src="img/products/product-3.jpg"
+              width="360"
+              height="380"
+              alt=""
+            />
             <h3 class="product-card-title">Непотопляемая селфи-палка</h3>
           </a>
           <p class="product-card-price">2 500 ₽</p>
         </div>
         <div class="product-card">
           <a class="product-card-link" href="#">
-            <img class="product-card-image" src="" alt="" />
+            <img
+              class="product-card-image"
+              src="img/products/product-4.jpg"
+              width="360"
+              height="380"
+              alt=""
+            />
             <h3 class="product-card-title">Селфи-палка «Следуй за мной»</h3>
           </a>
           <p class="product-card-price">4 900 ₽</p>
@@ -278,7 +306,9 @@
       <a class="footer-logo" href="https://htmlacademy.ru/">
         <img
           class="footer-logo-image"
-          src=""
+          src="img/logo/logo-footer.svg"
+          width="145"
+          height="36"
           alt="Логотип интернет-магазина 'Device'"
         />
       </a>
@@ -327,7 +357,9 @@
       <a class="htmlacademy-link" href="https://htmlacademy.ru/">
         <img
           class="footer-logo-image htmlacademy-image"
-          src=""
+          src="img/logo/logo-htmlacademy.svg"
+          width="115"
+          height="33"
           alt="Логотип разработчиков сайта"
         />
       </a>
