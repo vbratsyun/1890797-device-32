@@ -54,7 +54,7 @@ h4.visually-hidden {
   flex-grow: 1;
 }
 .header-container,
-.main-container,
+.page-container,
 .footer-container {
   width: 1160px;
   margin: 0 auto;
@@ -82,7 +82,7 @@ h4.visually-hidden {
   display: flex;
   margin-left: 60px;
 }
-.page-header,
+.header-container,
 .user-navigation-link,
 .main-navigation-link {
   color: #000000;
@@ -289,6 +289,12 @@ h4.visually-hidden {
 }
 
 /* Стили для catalog.html */
+.catalog-product {
+  display: flex;
+}
+.catalog-filter {
+  margin-right: 72px;
+}
 .inner-header-title {
   margin-left: 60px;
 }
@@ -303,6 +309,7 @@ h4.visually-hidden {
 .control-label,
 .sorting-type-title,
 .pagination-text,
+.pagination-number,
 .button-show-more {
   font-size: 16px;
   line-height: 19px;
@@ -323,7 +330,6 @@ h4.visually-hidden {
 
 .catalog-filter-title {
   font-weight: 700;
-  font-size: 18px;
   line-height: 20px;
   letter-spacing: -0.02em;
   color: #000000;
@@ -346,13 +352,13 @@ h4.visually-hidden {
 .product-card-title {
   font-weight: 700;
   line-height: 24px;
+  font-size: inherit;
   letter-spacing: -0.02em;
   color: #000000;
   text-decoration: none;
 }
 .product-card-price {
   line-height: 21px;
-  text-align: right;
 }
 .button-show-more {
   text-transform: uppercase;
@@ -361,7 +367,8 @@ h4.visually-hidden {
   box-sizing: border-box;
 }
 .pagination-number {
-  font: inherit;
+  font-size: 16px;
+  line-height: 19px;
   text-align: center;
   color: #444444;
   opacity: 0.3;
