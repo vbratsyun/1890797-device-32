@@ -53,15 +53,9 @@ h4.visually-hidden {
 .main-container {
   flex-grow: 1;
 }
-.page-header,
-.slider,
-.category,
-.delivery-product-button,
-.about-shop,
-.subscription-container,
-.subscription-form,
-.page-footer-container,
-.footer-social {
+.header-container,
+.main-container,
+.footer-container {
   width: 1160px;
   margin: 0 auto;
 }
@@ -83,7 +77,8 @@ h4.visually-hidden {
   padding: 0;
 }
 .user-navigation-list,
-.main-navigation-list {
+.main-navigation-list,
+.breadcrumbs-list {
   display: flex;
   margin-left: 60px;
 }
@@ -131,23 +126,20 @@ h4.visually-hidden {
   letter-spacing: 0.2em;
   text-align: center;
   text-transform: uppercase;
-  text-align: center;
   text-decoration: none;
   color: #000000;
 }
 .slider,
 .category-product-list,
-.about-shop,
+.about-shop-container,
 .subscription-block,
+.subscription-form,
 .footer-social,
 .footer-contact {
   display: flex;
   justify-content: space-between;
 }
-.services-item,
-.subscription-form {
-  display: flex;
-}
+
 /* Пользовательское меню - user-navigation-list */
 .search-item {
   opacity: 0.3;
@@ -199,7 +191,6 @@ h4.visually-hidden {
 .category-product-item {
   width: 160px;
   text-align: center;
-  outline: 2px solid red;
 }
 .product-item-link,
 .product-card-link,
@@ -215,13 +206,6 @@ h4.visually-hidden {
 }
 
 /* Сервисы - services*/
-.services-list {
-  width: 1094px;
-  margin: 0 auto;
-}
-.service-block {
-  margin-left: 240px;
-}
 .services,
 .delivery-product-button,
 .subscription {
@@ -305,6 +289,9 @@ h4.visually-hidden {
 }
 
 /* Стили для catalog.html */
+.inner-header-title {
+  margin-left: 60px;
+}
 .catalog-filter,
 .sorting-type,
 .pagination-list {
