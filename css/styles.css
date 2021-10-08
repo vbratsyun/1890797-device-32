@@ -144,60 +144,34 @@ h4.visually-hidden {
   display: flex;
   justify-content: space-between;
 }
-.slider-column-left,
-.slider-column-right,
-.service-block,
-.about-us,
-.contact,
-.subscription-title,
-.subscription-text,
-.subscription-form-input {
-  width: 560px;
-}
 .services-item,
 .subscription-form {
   display: flex;
 }
 /* Пользовательское меню - user-navigation-list */
-.user-navigation-list {
-  width: 1075px;
-}
-.user-navigation-item:first-child {
-  width: 516px;
+.search-item {
   opacity: 0.3;
   margin-right: 24px;
 }
-.user-navigation-item:nth-child(2) {
-  width: 245px;
+.login-item {
   margin-right: 15px;
 }
-.user-navigation-item:nth-child(3) {
-  width: 120px;
+.compare-item {
   margin-right: 14px;
 }
-.user-navigation-item:last-child {
-  width: 141px;
+.basket-item {
   margin-right: 25px;
 }
 
 /* Основное меню - main-navigation*/
-.main-navigation-list {
-  width: 1041px;
-}
-.main-navigation-item:first-child {
-  width: 293px;
+.catalog-item {
   margin-right: 247px;
 }
-.main-navigation-item:nth-child(2) {
-  width: 140px;
+.delivery-item {
   margin-right: 19px;
 }
-.main-navigation-item:nth-child(3) {
-  width: 140px;
+.warranty-item {
   margin-right: 62px;
-}
-.main-navigation-item:last-child {
-  width: 140px;
 }
 
 /* Слайдер в две колонки - slider*/
@@ -225,6 +199,7 @@ h4.visually-hidden {
 .category-product-item {
   width: 160px;
   text-align: center;
+  outline: 2px solid red;
 }
 .product-item-link,
 .product-card-link,
@@ -246,9 +221,6 @@ h4.visually-hidden {
 }
 .service-block {
   margin-left: 240px;
-}
-.services-link-text {
-  width: 497px;
 }
 .services,
 .delivery-product-button,
@@ -302,7 +274,6 @@ h4.visually-hidden {
   opacity: 0.5;
 }
 .subscription-button {
-  width: 260px;
   margin-right: 136px;
 }
 .subscription-button {
@@ -318,14 +289,7 @@ h4.visually-hidden {
   background-color: #444444;
 }
 .footer-container-address {
-  width: 238px;
   margin-right: 114px;
-}
-.footer-container-list {
-  width: 458px;
-}
-.footer-container-phone {
-  width: 293px;
 }
 .footer-text {
   font-size: 16px;
