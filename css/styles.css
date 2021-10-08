@@ -28,20 +28,46 @@
 }
 
 /* Стили для html.html */
-
+html {
+  height: 100%;
+}
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: Rubik, Arial, Helvetica, sans-serif;
   font-size: 18px;
   line-height: 30px;
   color: #444444;
   background-color: #ffffff;
 }
+/* Выделила заголовки, которые потом нужно скрыть, для того, чтобы не забыть про них.Потом уберу */
+h1.visually-hidden,
+h2.visually-hidden,
+h3.visually-hidden,
+h4.visually-hidden {
+  text-decoration: line-through;
+  color: rgb(8, 168, 88);
+}
+.main-container {
+  flex-grow: 1;
+}
 .page-header,
-.user-navigation-link,
-.main-navigation-link {
-  color: #000000;
-  background-color: #ffe17f;
-  text-decoration: none;
+.slider,
+.category,
+.delivery-product-button,
+.about-shop,
+.subscription-container,
+.subscription-form,
+.page-footer-container,
+.footer-social {
+  width: 1160px;
+  margin: 0 auto;
+}
+.header-logo-image {
+  display: block;
+  margin-left: 60px;
 }
 .user-navigation-list,
 .main-navigation-list,
@@ -53,9 +79,20 @@ body {
 .catalog-filter-list,
 .pagination-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
-.user-navigation-item:first-child {
-  opacity: 0.3;
+.user-navigation-list,
+.main-navigation-list {
+  display: flex;
+  margin-left: 60px;
+}
+.page-header,
+.user-navigation-link,
+.main-navigation-link {
+  color: #000000;
+  background-color: #ffe17f;
+  text-decoration: none;
 }
 .main-navigation-link,
 .footer-navigation-link,
@@ -79,14 +116,6 @@ body {
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
-.slider-position {
-  font-weight: 800;
-  font-size: 180px;
-  text-align: right;
-  color: #ffffff;
-  background-color: #ffe17f;
-  /* height: 323px; цифра на фоне*/
-}
 .slider-slogan,
 .services-link-title,
 .about-us-title,
@@ -106,6 +135,79 @@ body {
   text-decoration: none;
   color: #000000;
 }
+.slider,
+.category-product-list,
+.about-shop,
+.subscription-block,
+.footer-social,
+.footer-contact {
+  display: flex;
+  justify-content: space-between;
+}
+.slider-column-left,
+.slider-column-right,
+.service-block,
+.about-us,
+.contact,
+.subscription-title,
+.subscription-text,
+.subscription-form-input {
+  width: 560px;
+}
+.services-item,
+.subscription-form {
+  display: flex;
+}
+/* Пользовательское меню - user-navigation-list */
+.user-navigation-list {
+  width: 1075px;
+}
+.user-navigation-item:first-child {
+  width: 516px;
+  opacity: 0.3;
+  margin-right: 24px;
+}
+.user-navigation-item:nth-child(2) {
+  width: 245px;
+  margin-right: 15px;
+}
+.user-navigation-item:nth-child(3) {
+  width: 120px;
+  margin-right: 14px;
+}
+.user-navigation-item:last-child {
+  width: 141px;
+  margin-right: 25px;
+}
+
+/* Основное меню - main-navigation*/
+.main-navigation-list {
+  width: 1041px;
+}
+.main-navigation-item:first-child {
+  width: 293px;
+  margin-right: 247px;
+}
+.main-navigation-item:nth-child(2) {
+  width: 140px;
+  margin-right: 19px;
+}
+.main-navigation-item:nth-child(3) {
+  width: 140px;
+  margin-right: 62px;
+}
+.main-navigation-item:last-child {
+  width: 140px;
+}
+
+/* Слайдер в две колонки - slider*/
+.slider-position {
+  font-weight: 800;
+  font-size: 180px;
+  text-align: right;
+  color: #ffffff;
+  background-color: #ffe17f; /* height: 323px; цифра на фоне*/
+}
 .product-row-title {
   font-size: 36px;
   color: #000000;
@@ -113,8 +215,16 @@ body {
 .product-row-data {
   font-size: 16px;
 }
-.category-product-item {
+
+/* Категории - category*/
+.image-color {
+  width: 160px;
+  height: 160px;
   background-color: #ffe17f;
+}
+.category-product-item {
+  width: 160px;
+  text-align: center;
 }
 .product-item-link,
 .product-card-link,
@@ -128,6 +238,18 @@ body {
   text-align: left;
   color: #000000;
 }
+
+/* Сервисы - services*/
+.services-list {
+  width: 1094px;
+  margin: 0 auto;
+}
+.service-block {
+  margin-left: 240px;
+}
+.services-link-text {
+  width: 497px;
+}
 .services,
 .delivery-product-button,
 .subscription {
@@ -137,15 +259,21 @@ body {
 .services {
   background-image: url("../img/delivery.svg");
   background-repeat: no-repeat;
-  background-position-x: 60%; /*для примера сместила пока декоративную картинку немного вправо*/
+  background-position-x: 65%; /*для примера сместила пока декоративную картинку немного вправо, потом уберу*/
 }
+
+/* О компании - delivery-product*/
 .delivery-product-button {
+  display: block;
   font-size: 20px;
   line-height: 23px;
   text-align: center;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  border: none;
 }
+
+/* Информация о нас - about-us*/
 .about-us-list > li {
   color: #ffc700;
 }
@@ -154,6 +282,8 @@ body {
   line-height: 20px;
   color: #000000;
 }
+
+/* Информация о контактах - contact*/
 .contacts-subtitle {
   font-weight: 700;
   font-size: 24px;
@@ -165,9 +295,15 @@ body {
 .contacts-phone {
   color: #444444;
 }
+
+/* Подписка на рассылку - subscription*/
 .subscription-form-input {
   font: inherit;
   opacity: 0.5;
+}
+.subscription-button {
+  width: 260px;
+  margin-right: 136px;
 }
 .subscription-button {
   font-size: 18px;
@@ -175,9 +311,21 @@ body {
 .subscription-label {
   color: #444444;
 }
+
+/* Заключительная часть сайта - page-footer*/
 .page-footer {
   color: #ffffff;
   background-color: #444444;
+}
+.footer-container-address {
+  width: 238px;
+  margin-right: 114px;
+}
+.footer-container-list {
+  width: 458px;
+}
+.footer-container-phone {
+  width: 293px;
 }
 .footer-text {
   font-size: 16px;
