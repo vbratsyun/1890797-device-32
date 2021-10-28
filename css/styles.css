@@ -41,6 +41,7 @@ body {
   line-height: 30px;
   color: #444444;
   background-color: #ffffff;
+  z-index: -999;
 }
 .visually-hidden {
   position: absolute;
@@ -146,8 +147,7 @@ body {
 .about-shop-container,
 .subscription-block,
 .subscription-form,
-.footer-social,
-.footer-contact {
+.footer-social {
   display: flex;
   justify-content: space-between;
 }
@@ -156,6 +156,7 @@ body {
 .pagination-link {
   text-decoration: none;
 }
+<<<<<<< Updated upstream
 /* Пользовательское меню - user-navigation-list */
 .user-navigation-list {
   padding: 49px 25px 0 60px;
@@ -167,8 +168,97 @@ body {
 }
 .login-item {
   min-width: 220px; /*указала размеры только тектовой части без учеба иконки*/
-  margin-right: 15px;
+=======
+
+/* <!-- Вводная часть сайта --> */
+.header-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 46px;
+  position: relative;
 }
+.header-logo-image {
+  position: absolute;
+  display: block;
+  top: -25px;
+  left: 60px;
+}
+/* Пользовательское меню - user-navigation-list */
+.user-navigation {
+  display: flex;
+  margin-top: 34px;
+  margin-left: 45px;
+  margin-bottom: 18px;
+}
+.user-navigation-link {
+  display: block;
+  font-size: 16px;
+  line-height: 23px;
+  padding: 0;
+  margin: 0;
+}
+.search-form {
+  display: flex;
+  align-items: center;
+  background: url(../img/icon/search.svg) no-repeat 16px center;
+  margin-right: 19px;
+  position: relative;
+}
+.search-input {
+  min-width: 356px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  opacity: 0.3;
+  background-color: transparent;
+  border: 2px solid transparent;
+  padding: 0;
+  margin: 0;
+  border-radius: 20px;
+  padding: 11px 20px 10px 52px;
+  box-sizing: border-box;
+  outline: none;
+}
+.search-button {
+  min-width: 160px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: none;
+  letter-spacing: 0;
+  color: #000000;
+  background-color: transparent;
+  border: 2px solid #000000;
+  box-sizing: border-box;
+  border-radius: 0px 20px 20px 0px;
+  padding: 11px 47px;
+  margin: 0;
+  outline: none;
+  visibility: hidden;
+}
+.login-title {
+  max-width: 117px;
+  padding: 11px 21px 10px 46px;
+  margin-right: 141px;
+  background: url(../img/icon/login.svg) no-repeat 21px center;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  border-radius: 20px;
+  outline: none;
+}
+.compare-title {
+  max-width: 136px;
+  padding: 11px 21px 10px 41px;
+>>>>>>> Stashed changes
+  margin-right: 15px;
+  background: url(../img/icon/compare.svg) no-repeat 21px center;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  border-radius: 20px;
+  outline: none;
+}
+<<<<<<< Updated upstream
 .compare-item {
   min-width: 100px; /*указала размеры только тектовой части без учеба иконки*/
   margin-right: 14px;
@@ -179,30 +269,210 @@ body {
 /* Основное меню - main-navigation*/
 .main-navigation-list {
   padding: 29px 59px 152px 60px;
+=======
+.basket-title {
+  max-width: 131px;
+  padding: 11px 21px 10px 44px;
+  background: url(../img/icon/basket.svg) no-repeat 3px center;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  border-radius: 20px;
+  outline: none;
+}
+/* Псевдокласс*/
+/* Search  */
+/* Как сделать поиск по сайту в фокусе  */
+.search-input:hover {
+  opacity: 0.6;
+}
+.search-input:focus-within {
+  border: 2px solid #000000;
+  border-radius: 20px 0 0 20px;
+  border-right: 2px solid transparent;
+  box-sizing: border-box;
+  opacity: 1;
+}
+.search-input:focus-within + .search-button {
+  visibility: visible;
+  border: 2px solid #000000;
+  box-sizing: border-box;
+  border-radius: 0px 20px 20px 0px;
+}
+.search-button:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+.search-button:focus-within {
+  visibility: visible;
+  border: 2px solid #af4fff;
+  background-color: none;
+}
+.search-button:active {
+  visibility: visible;
+  border: 2px solid #000000;
+  background-color: #000000;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.login-title:hover,
+.compare-title:hover,
+.basket-title:hover {
+  opacity: 0.6;
+}
+.login-title:focus,
+.compare-title:focus,
+.basket-title:focus {
+  border: 2px solid #af4fff;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+.login-title:active,
+.compare-title:active,
+.basket-title:active {
+  opacity: 0.3;
+  border: 2px solid transparent;
+}
+/* Основное меню - main-navigation*/
+.main-navigation {
+  margin-bottom: 150px;
+}
+.main-navigation-link {
+  position: relative;
+  display: flex;
+}
+.catalog-item {
+  min-width: 263px;
+  margin-left: 40px;
+  margin-right: 230px;
+}
+.catalog-title,
+.delivery-title,
+.warranty-title,
+.contacts-title {
+  display: block;
+  margin: 0;
+  padding: 0;
+  padding: 14px 17px 15px;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  border-radius: 25px;
+  outline: none;
+}
+.circle {
+  width: 45px;
+  height: 45px;
+  opacity: 0.2;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  background: url(../img/icon/catalog-plus.svg) no-repeat center center;
+>>>>>>> Stashed changes
 }
 .delivery-item,
 .warranty-item,
 .contact-item {
-  min-width: 140px;
+  min-width: 165px;
 }
 .catalog-item {
   min-width: 236px; /*указала размеры только тектовой части без учеба иконки*/
   flex-grow: 1;
 }
 .delivery-item {
-  margin-right: 19px;
+  margin-right: -9px;
 }
 .warranty-item {
+<<<<<<< Updated upstream
   margin-right: 62px;
+=======
+  margin-right: 48px;
+>>>>>>> Stashed changes
 }
 .contact-item-link {
   text-align: right;
 }
-
+/* Псевдокласс - :hover  */
+.catalog-item:hover .circle {
+  opacity: 1;
+  background: url(../img/icon/catalog-minus.svg) no-repeat center center;
+}
+.delivery-title:hover::before,
+.warranty-title:hover::before,
+.contacts-title:hover::before {
+  content: "";
+  position: absolute;
+  left: 17px;
+  right: 17px;
+  bottom: 10px;
+  height: 2px;
+  background-color: #000000;
+}
+/* Псевдокласс - :focus  */
+.catalog-title:focus,
+.delivery-title:focus,
+.warranty-title:focus,
+.contacts-title:focus {
+  border: 2px solid #af4fff;
+  box-sizing: border-box;
+  border-radius: 25px;
+}
+/* Псевдокласс - :active  */
+.catalog-title:active {
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  border-radius: 25px;
+  opacity: 0.3;
+}
+.catalog-title:active + .circle {
+  opacity: 0.3;
+  background: url(../img/icon/catalog-minus.svg) no-repeat center center;
+}
+.delivery-title:active,
+.warranty-title:active,
+.contacts-title:active {
+  opacity: 0.3;
+}
 /* Слайдер в две колонки - slider*/
 .slider {
+<<<<<<< Updated upstream
   margin-bottom: 70px;
 }
+=======
+  display: grid;
+  grid-template-columns: 560px 560px;
+  align-items: start;
+  column-gap: 40px;
+  margin-bottom: 70px;
+}
+.slider-column-left {
+  position: relative;
+}
+.slider-image {
+  position: absolute;
+  top: -150px;
+}
+.slider-button {
+  border: none;
+  background-color: transparent;
+}
+.slider-prev {
+  position: absolute;
+  width: 40px;
+  height: 80px;
+  top: 89px;
+  left: 9px;
+  padding: 10px;
+  background: url(../img/icon/left-tall-arrow.svg) no-repeat center center;
+}
+.slider-next {
+  position: absolute;
+  width: 40px;
+  height: 80px;
+  top: 89px;
+  right: 9px;
+  padding: 10px;
+  transform: rotate(180deg);
+  background: url(../img/icon/left-tall-arrow.svg) no-repeat center center;
+}
+>>>>>>> Stashed changes
 .slider-text-list {
   list-style-type: none;
   counter-reset: my-awesome-counter;
@@ -220,7 +490,12 @@ body {
   color: #ffffff;
   position: absolute;
   right: 0;
+<<<<<<< Updated upstream
   top: -80px;
+=======
+  top: -67px; /*70px должно быть*/
+  margin-top: 29px;
+>>>>>>> Stashed changes
   margin-right: 49px;
 }
 .slider-slogan {
@@ -229,21 +504,78 @@ body {
 }
 .slider-text {
   margin: 0;
+<<<<<<< Updated upstream
   margin-bottom: 30px;
+=======
+  margin-bottom: 37px; /*по фигме 50px*/
+>>>>>>> Stashed changes
 }
 .detailed {
   display: flex;
   justify-content: space-between;
   align-items: center;
+<<<<<<< Updated upstream
   margin-bottom: 70px;
 }
 .detailed-title {
   flex-grow: 1;
+=======
+  margin-bottom: 52px; /*по фигме 70px*/
+}
+.slider-button-circle {
+  display: block;
+  margin: 0;
+  padding: 0;
+  margin-right: 200px;
+}
+.detailed-title {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 15px 0;
+  min-width: 220px;
+}
+.title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 2px;
+  margin: auto;
+  width: 220px;
+  height: 8px;
+  background-color: #ffe17f;
+  z-index: -1;
+>>>>>>> Stashed changes
 }
 .slider-pagination-list {
   display: flex;
+  flex-wrap: wrap;
   margin-right: 60px;
 }
+<<<<<<< Updated upstream
+=======
+.slider-pagination-item {
+  margin-right: 22px;
+}
+.slider-pagination-item:last-child {
+  margin-right: 0;
+}
+.pagination-button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  border: 2px solid #000000;
+  box-sizing: border-box;
+}
+.pagination-button-current {
+  background: #000000;
+}
+>>>>>>> Stashed changes
 .characteristic-product {
   position: relative;
   left: -20px;
@@ -260,7 +592,58 @@ body {
 .product-row-data {
   font-size: 16px;
 }
-
+/* Псевдокласс - :hover  */
+.slider-prev:hover,
+.slider-next:hover {
+  opacity: 0.6;
+}
+.slider-button-circle:hover .title {
+  background-color: #ffe17f;
+}
+.pagination-button:hover {
+  background: #ffffff;
+  opacity: 0.6;
+  border: 2px solid #000000;
+  box-sizing: border-box;
+}
+/* Псевдокласс - :focus  */
+.slider-prev:focus,
+.slider-next:focus {
+  border: 2px solid #af4fff;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+.slider-button-circle:focus .title::before {
+  background-color: #af4fff;
+}
+.pagination-button:focus {
+  background: #ffffff;
+  border: 2px solid #af4fff;
+  box-sizing: border-box;
+}
+/* Псевдокласс - :active  */
+.slider-prev:active,
+.slider-next:active {
+  opacity: 0.3;
+  border: 2px solid transparent;
+}
+.slider-button-circle:active .title {
+  color: rgba(0, 0, 0, 0.3);
+  background-color: #ffe17f;
+}
+.slider-button-circle:active .title {
+  color: rgba(0, 0, 0, 0.3);
+  background-color: #ffe17f;
+}
+.slider-button-circle:active .title::before {
+  background-color: transparent;
+}
+.pagination-button:active {
+  background: #ffffff;
+  opacity: 0.3;
+  border: 2px solid #000000;
+  box-sizing: border-box;
+}
 /* Категории - category*/
 .category {
   margin-bottom: 169px;
@@ -297,6 +680,10 @@ body {
 .subscription {
   color: #000000;
   background-color: #f0f0f0;
+<<<<<<< Updated upstream
+=======
+  z-index: -998;
+>>>>>>> Stashed changes
 }
 .services-block {
   display: flex;
@@ -407,6 +794,7 @@ body {
 .contact-address,
 .footer-address,
 .footer-address-phone {
+  margin: 0;
   font-style: normal;
 }
 .contacts-address-text {
@@ -423,15 +811,17 @@ body {
 }
 
 /* Подписка на рассылку - subscription*/
+.subscription {
+  padding-bottom: 130px;
+}
 .subscription-block {
   column-gap: 40px;
 }
 .subscription-title {
   max-width: 560px;
-  padding-bottom: 20px;
   margin: 0;
   margin-top: 75px;
-  margin-bottom: 40px;
+  margin-bottom: 62px;
 }
 .subscription-text {
   max-width: 560px;
@@ -445,7 +835,10 @@ body {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: baseline;
+<<<<<<< Updated upstream
   padding-bottom: 134px;
+=======
+>>>>>>> Stashed changes
 }
 .subscription-form-input {
   box-sizing: border-box;
@@ -453,7 +846,7 @@ body {
   opacity: 0.5;
   min-width: 601px;
   border: none;
-  padding-bottom: 10px; /*в фигме 9px*/
+  padding-bottom: 11px; /*в фигме 9px*/
   border-bottom-width: 3px;
   border-bottom-style: solid;
   border-bottom-color: rgba(0, 0, 0, 0.1);
@@ -492,7 +885,14 @@ body {
 .footer-logo {
   display: block;
   padding-top: 62px;
+<<<<<<< Updated upstream
   padding-bottom: 35px;
+=======
+  margin-bottom: 23px; /*в фигме 35px*/
+}
+.footer-contact {
+  display: flex;
+>>>>>>> Stashed changes
 }
 .footer-contact {
   margin-bottom: 49px;
@@ -500,7 +900,22 @@ body {
 .footer-address-text {
   margin-right: 114px;
 }
+<<<<<<< Updated upstream
 .footer-text {
+=======
+
+.footer-text,
+.catalog-filter-head,
+.sorting-type-title,
+.selected-control,
+.breadcrumbs-item-link,
+.control-label,
+.sorting-type-title,
+.pagination-text,
+.pagination-number,
+.button-show-more,
+.pagination-number {
+>>>>>>> Stashed changes
   font-size: 16px;
   line-height: 19px;
   padding: 0;
@@ -521,10 +936,20 @@ body {
   color: #ffffff;
   text-decoration: none;
 }
+.footer-item:nth-child(2) .footer-navigation-link {
+  position: relative;
+  left: 8px;
+}
+.footer-item:nth-child(3) .footer-navigation-link {
+  position: relative;
+  left: 12px;
+}
 .footer-address-phone {
   min-width: 293px;
 }
 .footer-text-phone {
+  position: relative;
+  left: 12px;
   text-align: right;
   font-size: 16px;
   padding: 0;
@@ -541,9 +966,12 @@ body {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+<<<<<<< Updated upstream
   margin-right: 14px;
   margin-bottom: 14px;
   outline: 1px solid red;
+=======
+>>>>>>> Stashed changes
 }
 .footer-social-item:nth-child(3n) {
   margin-right: 0;
