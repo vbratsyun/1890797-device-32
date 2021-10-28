@@ -156,19 +156,6 @@ body {
 .pagination-link {
   text-decoration: none;
 }
-<<<<<<< Updated upstream
-/* Пользовательское меню - user-navigation-list */
-.user-navigation-list {
-  padding: 49px 25px 0 60px;
-}
-.search-item {
-  min-width: 480px; /*указала размеры только тектовой части без учеба иконки*/
-  flex-grow: 1;
-  opacity: 0.3;
-}
-.login-item {
-  min-width: 220px; /*указала размеры только тектовой части без учеба иконки*/
-=======
 
 /* <!-- Вводная часть сайта --> */
 .header-container {
@@ -250,7 +237,6 @@ body {
 .compare-title {
   max-width: 136px;
   padding: 11px 21px 10px 41px;
->>>>>>> Stashed changes
   margin-right: 15px;
   background: url(../img/icon/compare.svg) no-repeat 21px center;
   border: 2px solid transparent;
@@ -258,18 +244,6 @@ body {
   border-radius: 20px;
   outline: none;
 }
-<<<<<<< Updated upstream
-.compare-item {
-  min-width: 100px; /*указала размеры только тектовой части без учеба иконки*/
-  margin-right: 14px;
-}
-.basket-item {
-  min-width: 100px; /*указала размеры только тектовой части без учеба иконки*/
-}
-/* Основное меню - main-navigation*/
-.main-navigation-list {
-  padding: 29px 59px 152px 60px;
-=======
 .basket-title {
   max-width: 131px;
   padding: 11px 21px 10px 44px;
@@ -365,7 +339,6 @@ body {
   border: 2px solid #000000;
   border-radius: 50%;
   background: url(../img/icon/catalog-plus.svg) no-repeat center center;
->>>>>>> Stashed changes
 }
 .delivery-item,
 .warranty-item,
@@ -380,11 +353,7 @@ body {
   margin-right: -9px;
 }
 .warranty-item {
-<<<<<<< Updated upstream
-  margin-right: 62px;
-=======
   margin-right: 48px;
->>>>>>> Stashed changes
 }
 .contact-item-link {
   text-align: right;
@@ -432,10 +401,6 @@ body {
 }
 /* Слайдер в две колонки - slider*/
 .slider {
-<<<<<<< Updated upstream
-  margin-bottom: 70px;
-}
-=======
   display: grid;
   grid-template-columns: 560px 560px;
   align-items: start;
@@ -472,7 +437,6 @@ body {
   transform: rotate(180deg);
   background: url(../img/icon/left-tall-arrow.svg) no-repeat center center;
 }
->>>>>>> Stashed changes
 .slider-text-list {
   list-style-type: none;
   counter-reset: my-awesome-counter;
@@ -490,12 +454,8 @@ body {
   color: #ffffff;
   position: absolute;
   right: 0;
-<<<<<<< Updated upstream
-  top: -80px;
-=======
   top: -67px; /*70px должно быть*/
   margin-top: 29px;
->>>>>>> Stashed changes
   margin-right: 49px;
 }
 .slider-slogan {
@@ -504,22 +464,12 @@ body {
 }
 .slider-text {
   margin: 0;
-<<<<<<< Updated upstream
-  margin-bottom: 30px;
-=======
   margin-bottom: 37px; /*по фигме 50px*/
->>>>>>> Stashed changes
 }
 .detailed {
   display: flex;
   justify-content: space-between;
   align-items: center;
-<<<<<<< Updated upstream
-  margin-bottom: 70px;
-}
-.detailed-title {
-  flex-grow: 1;
-=======
   margin-bottom: 52px; /*по фигме 70px*/
 }
 .slider-button-circle {
@@ -547,15 +497,12 @@ body {
   height: 8px;
   background-color: #ffe17f;
   z-index: -1;
->>>>>>> Stashed changes
 }
 .slider-pagination-list {
   display: flex;
   flex-wrap: wrap;
   margin-right: 60px;
 }
-<<<<<<< Updated upstream
-=======
 .slider-pagination-item {
   margin-right: 22px;
 }
@@ -575,7 +522,6 @@ body {
 .pagination-button-current {
   background: #000000;
 }
->>>>>>> Stashed changes
 .characteristic-product {
   position: relative;
   left: -20px;
@@ -680,10 +626,7 @@ body {
 .subscription {
   color: #000000;
   background-color: #f0f0f0;
-<<<<<<< Updated upstream
-=======
   z-index: -998;
->>>>>>> Stashed changes
 }
 .services-block {
   display: flex;
@@ -835,10 +778,6 @@ body {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: baseline;
-<<<<<<< Updated upstream
-  padding-bottom: 134px;
-=======
->>>>>>> Stashed changes
 }
 .subscription-form-input {
   box-sizing: border-box;
@@ -885,14 +824,10 @@ body {
 .footer-logo {
   display: block;
   padding-top: 62px;
-<<<<<<< Updated upstream
-  padding-bottom: 35px;
-=======
   margin-bottom: 23px; /*в фигме 35px*/
 }
 .footer-contact {
   display: flex;
->>>>>>> Stashed changes
 }
 .footer-contact {
   margin-bottom: 49px;
@@ -900,9 +835,6 @@ body {
 .footer-address-text {
   margin-right: 114px;
 }
-<<<<<<< Updated upstream
-.footer-text {
-=======
 
 .footer-text,
 .catalog-filter-head,
@@ -915,7 +847,6 @@ body {
 .pagination-number,
 .button-show-more,
 .pagination-number {
->>>>>>> Stashed changes
   font-size: 16px;
   line-height: 19px;
   padding: 0;
@@ -966,12 +897,6 @@ body {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-<<<<<<< Updated upstream
-  margin-right: 14px;
-  margin-bottom: 14px;
-  outline: 1px solid red;
-=======
->>>>>>> Stashed changes
 }
 .footer-social-item:nth-child(3n) {
   margin-right: 0;
