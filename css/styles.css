@@ -398,6 +398,8 @@ body {
   border: 2px solid #af4fff;
   box-sizing: border-box;
   border-radius: 25px;
+  position: relative;
+  z-index: 1;
 }
 /* Псевдокласс - :active  */
 .main-navigation-link:active {
@@ -1491,60 +1493,85 @@ body {
   margin-bottom: 35px;
 }
 .inner-header {
-  margin-bottom: 49px;
+  margin-bottom: 43px;
 }
 .inner-header-title {
   padding: 0;
   margin: 0;
-  margin-bottom: 23px;
+  margin-bottom: 19px;
   margin-left: 60px;
 }
 .breadcrumbs-list {
-  margin-left: 60px;
+  margin-left: 47px;
 }
 .breadcrumbs-item-link {
   display: block;
   text-decoration: none;
   opacity: 0.6;
-  margin-right: 35px;
+  margin-right: 11px;
+  padding: 5px 12px;
+  outline: 5px solid transparent;
+  box-sizing: border-box;
+}
+.breadcrumbs-item {
   position: relative;
 }
-.breadcrumbs-item:first-child .breadcrumbs-item-link::after {
+.breadcrumbs-item:first-child::after {
   content: "";
   position: absolute;
   top: 1px;
   right: 0;
-  left: 78px;
+  left: 89px;
   bottom: 0;
   margin: auto;
   width: 4px;
   height: 7px;
   background: url(../img/breadcrumbs-icon.svg) no-repeat center;
+  opacity: 0.3;
 }
-.breadcrumbs-item:nth-child(2) .breadcrumbs-item-link::after {
+.breadcrumbs-item:nth-child(2)::after {
   content: "";
   position: absolute;
   top: 1px;
   right: 0;
-  left: 144px;
+  left: 154px;
   bottom: 0;
   margin: auto;
   width: 4px;
   height: 7px;
   background: url(../img/breadcrumbs-icon.svg) no-repeat center;
+  opacity: 0.3;
 }
+/* Псевдокласс - :hover */
+.breadcrumbs-item-link:hover {
+  opacity: 1;
+}
+/* Псевдокласс - :focus */ /*НЕ РАБОТАЕТ*/
+.breadcrumbs-item-link:focus {
+  outline: 5px solid #af4fff;
+}
+/* Псевдокласс - :active */
+.breadcrumbs-item-link:active {
+  opacity: 0.3;
+  outline: 5px solid transparent;
+}
+/* <!-- Список фильтров --> */
 .filter-container {
   display: flex;
+  position: relative;
+  z-index: 1;
 }
 .filter-left-column {
   width: calc(50% - 580px + 328px);
-  padding-left: calc(50% - 580px);
+  padding-left: calc(50% - 581px);
   padding-right: 70px;
   min-width: 328px;
   box-sizing: border-box;
   display: flex;
   background: #dcdcdc;
   align-items: center;
+  position: relative;
+  z-index: -3;
 }
 .filter-head {
   padding: 20px 32px 20px 60px;
@@ -1559,7 +1586,7 @@ body {
 .sorting-right-column {
   width: calc(50% - 580px + 832px);
   min-width: 832px;
-  padding-right: calc(50% - 580px);
+  padding-right: calc(50% - 581px);
   padding-left: 72px;
   box-sizing: border-box;
   background: #ebebeb;
@@ -1570,13 +1597,84 @@ body {
   padding-bottom: 20px;
   box-sizing: border-box;
 }
-.filter-left-block {
-  background: #ebebeb;
-  padding-top: 70px;
-  align-items: flex-start;
+.sorting-type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.catalog-filter {
-  padding-left: 60px;
+.sorting-type-title {
+  margin-right: 36px;
+}
+
+.selected-control {
+  min-width: 217px;
+  outline: 5px solid transparent;
+  font: inherit;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 4px 41px 7px 13px;
+  background-color: transparent;
+  background: url(../img/filter/select-arrow.svg) no-repeat 191px center;
+  appearance: none;
+  border: none;
+  margin-right: 301px;
+}
+.sorting-button-container {
+  display: flex;
+}
+.sorting-button {
+  opacity: 0.2;
+  box-sizing: border-box;
+  display: block;
+  width: 30px;
+  height: 30px;
+  outline: 5px solid transparent;
+}
+.sorting-button-icon {
+  width: 11px;
+  height: 10px;
+  position: relative;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.sorting-button-active {
+  opacity: 1;
+  transform: rotate(180deg);
+}
+/* Псевдокласс - :hover */
+.selected-control:hover {
+  opacity: 0.6;
+}
+/* Псевдокласс - :focus */
+.selected-control:focus {
+  outline: 5px solid #af4fff;
+}
+/* Псевдокласс - :active */
+.selected-control:active {
+  opacity: 0.3;
+  outline: 5px solid transparent;
+}
+/* Псевдокласс - :hover */
+.sorting-button:hover {
+  opacity: 0.5;
+}
+/* Псевдокласс - :focus */
+.sorting-button:focus {
+  outline: 5px solid #af4fff;
+  opacity: 1;
+}
+.sorting-button:focus .sorting-button-icon {
+  opacity: 0.2;
+}
+/* Псевдокласс - :active */
+.sorting-button:active {
+  opacity: 1;
+  outline: 5px solid transparent;
+}
+.sorting-button:active .sorting-button-icon {
+  opacity: 1;
 }
 /* Сортировка */
 .sorting-container {
@@ -1590,8 +1688,8 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
-  margin-top: 69px;
-  margin-left: 72px;
+  margin-top: 71px;
+  margin-left: 71px;
   margin-bottom: 44px;
 }
 .product-title-link {
@@ -1604,9 +1702,14 @@ body {
   grid-template-rows: 380px min-content;
   align-items: baseline;
   row-gap: 32px;
+  position: relative;
 }
 .product-card-link {
   grid-column: 1/-1;
+}
+.product-card-image {
+  outline: 5px solid transparent;
+  box-sizing: border-box;
 }
 .product-card-price {
   text-align: right;
@@ -1635,6 +1738,7 @@ body {
 .product-card-price {
   line-height: 21px;
   margin: 0;
+  color: #000000;
 }
 .button-show-more {
   background: #ffffff;
@@ -1645,7 +1749,8 @@ body {
   border-color: rgba(0, 0, 0, 0.1);
   padding: 15px;
   margin-left: 72px;
-  margin-bottom: 54px;
+  margin-bottom: 50px;
+  outline: 2px solid transparent;
   position: relative;
   top: 2px;
   left: 2px;
@@ -1653,36 +1758,41 @@ body {
 /* Пагинация */
 .pagination {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   background-color: #ebebeb;
   margin-left: 72px;
-  margin-bottom: 75px;
+  margin-bottom: 77px;
+  box-sizing: border-box;
 }
 .pagination-list {
   display: flex;
   min-height: 70px;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   margin: 0;
   padding: 0;
-}
-.pagination-item:not(:last-child) {
-  margin-right: 28px;
+  max-width: 169px;
 }
 .pagination-link {
   display: block;
   cursor: pointer;
+  outline: 5px solid transparent;
+  box-sizing: border-box;
+}
+.pagination-disabled {
+  margin-right: 22px;
 }
 .pagination-text {
   display: block;
-}
-.pagination-prev {
-  padding-left: 30px;
-  padding-right: 57px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  padding-left: 29px;
+  padding-right: 29px;
 }
 .pagination-next {
-  padding-right: 27px;
+  padding-right: 26px;
 }
 .sorting-type-title,
 .pagination-text {
@@ -1695,6 +1805,9 @@ body {
   text-align: center;
   color: #444444;
   opacity: 0.3;
+  padding: 15px;
+  outline: 5px solid transparent;
+  box-sizing: border-box;
 }
 .catalog-filter-head {
   letter-spacing: 0.2em;
@@ -1713,4 +1826,370 @@ body {
   line-height: 18px;
   color: #000000;
   opacity: 0.3;
+}
+.card-button {
+  position: absolute;
+  top: 32%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180px;
+  padding: 15px 17px;
+  box-sizing: border-box;
+  display: none;
+}
+.card-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  width: 100%;
+  height: 8px;
+  background-color: #ffc700;
+}
+/* Псевдокласс - :hover */
+.product-card:hover .card-button {
+  background-color: #ffc700;
+  display: block;
+}
+/* Псевдокласс - :focus !!!НЕ РАБОТАЕТ!!! */
+.product-card:focus .card-button {
+  display: none;
+}
+.product-card:focus .product-card-title {
+  color: #af4fff;
+}
+.product-card:focus .product-card-price {
+  color: #af4fff;
+}
+.product-card:focus .product-card-image {
+  outline: 5px solid #af4fff;
+}
+/* Псевдокласс - :active */
+.product-card:active .card-button-title {
+  opacity: 0.2;
+}
+/* Псевдокласс - :hover */
+.button-show-more:hover {
+  border-color: #000000;
+}
+/* Псевдокласс - :focus */
+.button-show-more:focus {
+  opacity: 1;
+  border: 3px solid #af4fff;
+  outline: 2px solid #af4fff;
+}
+/* Псевдокласс - :active */
+.button-show-more:active {
+  opacity: 0.3;
+  border: 3px solid #000000;
+  outline: 2px solid transparent;
+}
+/* Псевдокласс - :hover */
+.pagination-link:hover {
+  background-color: #dcdcdc;
+}
+.pagination-link:hover .pagination-number {
+  opacity: 1;
+}
+/* Псевдокласс - :focus */
+.pagination-link:focus {
+  background-color: #f0f0f0;
+  outline: 5px solid #af4fff;
+  outline-offset: -5px;
+}
+
+/* Псевдокласс - :active */
+.pagination-link:active {
+  opacity: 0.3;
+}
+.pagination-link:active {
+  opacity: 0.1;
+}
+/* Фильтр */
+.filter-left-block {
+  background: #ebebeb;
+  padding-top: 70px;
+  align-items: flex-start;
+  position: relative;
+  z-index: -2;
+}
+.catalog-filter {
+  padding-left: 60px;
+}
+.catalog-filter {
+  position: relative;
+}
+.catalog-filter-group {
+  padding: 0;
+  margin: 0;
+  border: none;
+  position: relative;
+}
+.filter-group-range {
+  margin-bottom: 34px;
+}
+.filter-group-checkbox {
+  margin-bottom: 39px;
+}
+.filter-group-radio {
+  margin-bottom: 33px;
+}
+.catalog-filter-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 200px;
+  background-color: #000000;
+}
+.catalog-filter-title {
+  padding-top: 14px;
+  margin-bottom: 12px;
+}
+.range-scale {
+  position: relative;
+  height: 2px;
+  background-color: #dcdcdc;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  width: 80%;
+}
+.range-bar {
+  position: absolute;
+  height: 2px;
+  background-color: #000000;
+}
+.range-toggle {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: #ebebeb;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.toggle-min {
+  top: -9px;
+}
+.toggle-max {
+  top: -9px;
+  right: -9px;
+}
+.range-wrapper-inputs {
+  display: flex;
+}
+.catalog-filter-label {
+  display: flex;
+  margin-right: 60px;
+  opacity: 0.3;
+  color: #000000;
+  font-size: 15px;
+  line-height: 18px;
+  position: relative;
+  left: -7px;
+}
+.range-input {
+  width: 17px;
+  padding: 0 2px;
+  font: inherit;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  appearance: textfield;
+}
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+.control {
+  position: relative;
+  display: block;
+  padding-left: 37px;
+}
+.catalog-filter-list {
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+}
+.catalog-filter-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+.control-mark {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: #ebebeb;
+  border: 2px solid #000000;
+  box-sizing: border-box;
+  border-radius: 3px;
+  opacity: 0.2;
+}
+.control-input[type="checkbox"]:checked + .control-mark {
+  opacity: 1;
+}
+.control-input[type="checkbox"]:checked + .control-mark::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  height: 10px;
+  width: 10px;
+  background: url(../img/filter/checkbox-black.svg) no-repeat center;
+}
+.control-input[type="radio"]:checked + .control-mark {
+  border-radius: 50%;
+  opacity: 1;
+}
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+  opacity: 0.2;
+}
+.control-input[type="radio"]:checked + .control-mark::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background-color: #242424;
+}
+
+.catalog-filter-button {
+  position: relative;
+  left: 3px;
+  display: block;
+  font-family: Raleway, sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background-color: transparent;
+  margin: 0;
+  padding: 15px 0;
+  min-width: 200px;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+.catalog-filter-button::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 8px;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: #ffe17f;
+  z-index: -1;
+}
+
+/* Псевдокласс - :focus */
+.range-toggle:focus {
+  border: 2px solid #af4fff;
+}
+/*НЕ РАБОТАЕТ*/
+.range-toggle:focus + .catalog-filter-label {
+  color: rgba(175, 79, 255, 0.3);
+}
+.range-toggle:active {
+  border: 2px solid #000000;
+  background-color: #000000;
+}
+.control:focus .control-input[type="checkbox"]:checked + .control-mark::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  height: 10px;
+  width: 10px;
+  background: url(../img/filter/checkbox-color.svg) no-repeat center;
+}
+/* Псевдокласс - :hover */
+.control:hover .control-label {
+  opacity: 0.5;
+}
+.control:hover .control-mark {
+  border-color: rgba(0, 0, 0, 0.5);
+}
+.control:hover .control-input[type="checkbox"]:checked + .control-mark::before {
+  opacity: 0.5;
+}
+/* Псевдокласс - :focus */ /*НЕ РАБОТАЕТ*/
+.control:focus .control-label {
+  color: #af4fff;
+}
+.control:focus .control-mark {
+  border: 2px solid rgba(175, 79, 255, 1);
+}
+/* Псевдокласс - :active */
+.control:active .control-label {
+  opacity: 0.2;
+}
+.control:active .control-mark {
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.control:active
+  .control-input[type="checkbox"]:checked
+  + .control-mark::before {
+  opacity: 0.2;
+}
+/* Псевдокласс - :hover */
+.control:hover .control-label {
+  opacity: 0.5;
+}
+.control:hover .control-mark {
+  border-color: rgba(0, 0, 0, 0.5);
+}
+.control:hover .control-input[type="radio"]:checked + .control-mark::before {
+  opacity: 0.5;
+}
+/* Псевдокласс - :focus */ /*НЕ РАБОТАЕТ*/
+.control:focus .control-label {
+  color: #af4fff;
+}
+.control:focus .control-mark {
+  border: 2px solid #af4fff;
+}
+.control:focus .control-input[type="radio"]:checked + .control-mark::before {
+  background-color: #af4fff;
+}
+/* Псевдокласс - :active */
+.control:active .control-label {
+  opacity: 0.2;
+}
+.control:active .control-mark {
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.control:active .control-input[type="radio"]:checked + .control-mark::before {
+  opacity: 0.2;
+}
+/* Псевдокласс - :hover  */
+.catalog-filter-button:hover {
+  background: #ffe17f;
+}
+/* Псевдокласс - :focus  */
+.catalog-filter-button:focus::before {
+  background-color: #af4fff;
+}
+/* Псевдокласс - :active  */
+.catalog-filter-button:active {
+  color: rgba(0, 0, 0, 0.3);
 }
