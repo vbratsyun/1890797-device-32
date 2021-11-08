@@ -74,6 +74,7 @@ body {
 .slider-pagination-list,
 .slider-text-list,
 .main-navigation-list,
+.subcatalog-list,
 .category-product-list,
 .services-list,
 .about-us-list,
@@ -95,7 +96,8 @@ body {
 }
 .user-navigation-link,
 .pagination-button,
-.main-navigation-link {
+.main-navigation-link,
+.subcatalog-link {
   display: block;
 }
 .header-container,
@@ -379,10 +381,64 @@ body {
 .contacts-title {
   text-align: right;
 }
+.subcatalog-container {
+  position: relative;
+  visibility: hidden;
+}
+.subcatalog-list {
+  width: 1160px;
+  position: absolute;
+  top: 28px;
+  left: -42px;
+  padding-left: 60px;
+  padding-bottom: 57px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(3, max-content);
+  gap: 18px 46px;
+  grid-template-areas:
+    "virtual fitness-bracelets quadrocopters"
+    "monopods smart-watches ."
+    "action-cameras . .";
+  background-color: lawngreen; /*#FFE17F;*/
+  box-sizing: border-box;
+}
+.virtual-reality-item {
+  grid-area: virtual;
+}
+.monopods-item {
+  grid-area: monopods;
+}
+.action-cameras-item {
+  grid-area: action-cameras;
+}
+.fitness-bracelets-item {
+  grid-area: fitness-bracelets;
+}
+.smart-watches-item {
+  grid-area: smart-watches;
+}
+.quadrocopters-item {
+  grid-area: quadrocopters;
+}
+.subcatalog-link {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 18px;
+  color: #000000;
+  text-decoration: none;
+}
 /* Псевдокласс - :hover  */
 .catalog-item:hover .catalog-title::after {
   opacity: 1;
   background: url(../img/icon/catalog-minus.svg) no-repeat center center;
+}
+.catalog-item:hover .subcatalog-container {
+  visibility: visible;
+}
+.catalog-item:hover .header-container {
+  position: relative;
+  z-index: 2;
 }
 .main-navigation-link:hover:not(.catalog-title)::before {
   content: "";
@@ -393,6 +449,7 @@ body {
   height: 2px;
   background-color: #000000;
 }
+
 /* Псевдокласс - :focus   !!!НЕ РАБОТАЕТ!!!  */
 .main-navigation-link:focus {
   border: 2px solid #af4fff;
@@ -1218,6 +1275,7 @@ body {
   color: #ffffff;
   opacity: 0.3;
 }
+
 /* Псевдокласс - :ошибка */
 /* Создала класс .error дфлее с помощью JS будет подсвечиваться форма по стайлгайду */
 .subscription-form-error + .subscription-form-input {
@@ -1700,12 +1758,25 @@ body {
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: 380px min-content;
-  align-items: baseline;
   row-gap: 32px;
   position: relative;
 }
 .product-card-link {
   grid-column: 1/-1;
+  position: relative;
+}
+.product-card-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(240, 240, 240, 0.8);
+  display: none;
 }
 .product-card-image {
   outline: 5px solid transparent;
@@ -1738,7 +1809,7 @@ body {
 .product-card-price {
   line-height: 21px;
   margin: 0;
-  color: #000000;
+  color: inherit;
 }
 .button-show-more {
   background: #ffffff;
@@ -1850,30 +1921,47 @@ body {
 }
 /* Псевдокласс - :hover */
 .product-card:hover .card-button {
-  background-color: #ffc700;
   display: block;
 }
-/* Псевдокласс - :focus !!!НЕ РАБОТАЕТ!!! */
+.product-card:hover .product-card-link::before {
+  display: block;
+}
+.card-button:hover::before {
+  transform: scaleY(6.3);
+  left: 0;
+  top: 40%;
+}
+/* Псевдокласс - :focus*/
 .product-card:focus .card-button {
   display: none;
 }
-.product-card:focus .product-card-title {
+.product-card:focus-within .product-card-title {
   color: #af4fff;
 }
-.product-card:focus .product-card-price {
+.product-card:focus-within .product-card-price {
   color: #af4fff;
 }
-.product-card:focus .product-card-image {
+.product-card:focus-within .product-card-image {
   outline: 5px solid #af4fff;
 }
 /* Псевдокласс - :active */
 .product-card:active .card-button-title {
   opacity: 0.2;
 }
+.product-card:active .product-card-title {
+  color: #000000;
+}
+.product-card:active .product-card-price {
+  color: inherit;
+}
+.product-card:active .product-card-image {
+  outline: 5px solid transparent;
+}
 /* Псевдокласс - :hover */
 .button-show-more:hover {
   border-color: #000000;
 }
+
 /* Псевдокласс - :focus */
 .button-show-more:focus {
   opacity: 1;
@@ -1999,6 +2087,7 @@ body {
   text-align: center;
   background-color: transparent;
   border: none;
+  outline: none;
   appearance: textfield;
 }
 .range-input::-webkit-outer-spin-button,
@@ -2102,15 +2191,37 @@ body {
 .range-toggle:focus {
   border: 2px solid #af4fff;
 }
-/*НЕ РАБОТАЕТ*/
-.range-toggle:focus + .catalog-filter-label {
-  color: rgba(175, 79, 255, 0.3);
+.range-input:focus {
+  color: #af4fff;
 }
+.catalog-filter-label:focus {
+  color: #af4fff;
+}
+/* Псевдокласс - :active */
 .range-toggle:active {
   border: 2px solid #000000;
   background-color: #000000;
 }
-.control:focus .control-input[type="checkbox"]:checked + .control-mark::before {
+.range-input:active {
+  color: #000000;
+}
+.catalog-filter-label:active {
+  color: #000000;
+  opacity: 1;
+}
+/* Псевдокласс - :hover */
+.control:hover .control-label {
+  opacity: 0.5;
+}
+.control:hover .control-mark {
+  border-color: rgba(0, 0, 0, 0.5);
+}
+/* Псевдокласс - :focus */
+.control-input[type="checkbox"]:focus + .control-mark {
+  border: 2px solid #af4fff;
+  opacity: 1;
+}
+.control-input[type="checkbox"]:focus + .control-mark::before {
   content: "";
   position: absolute;
   top: 0;
@@ -2122,22 +2233,9 @@ body {
   width: 10px;
   background: url(../img/filter/checkbox-color.svg) no-repeat center;
 }
-/* Псевдокласс - :hover */
-.control:hover .control-label {
-  opacity: 0.5;
-}
-.control:hover .control-mark {
-  border-color: rgba(0, 0, 0, 0.5);
-}
-.control:hover .control-input[type="checkbox"]:checked + .control-mark::before {
-  opacity: 0.5;
-}
-/* Псевдокласс - :focus */ /*НЕ РАБОТАЕТ*/
-.control:focus .control-label {
+.control-input[type="checkbox"]:focus ~ .control-label {
   color: #af4fff;
-}
-.control:focus .control-mark {
-  border: 2px solid rgba(175, 79, 255, 1);
+  opacity: 1;
 }
 /* Псевдокласс - :active */
 .control:active .control-label {
@@ -2161,15 +2259,17 @@ body {
 .control:hover .control-input[type="radio"]:checked + .control-mark::before {
   opacity: 0.5;
 }
-/* Псевдокласс - :focus */ /*НЕ РАБОТАЕТ*/
-.control:focus .control-label {
-  color: #af4fff;
-}
-.control:focus .control-mark {
+/* Псевдокласс - :focus */
+.control-input[type="radio"]:focus + .control-mark {
   border: 2px solid #af4fff;
+  opacity: 1;
 }
-.control:focus .control-input[type="radio"]:checked + .control-mark::before {
+.control-input[type="radio"]:focus + .control-mark::before {
   background-color: #af4fff;
+}
+.control-input[type="radio"]:focus ~ .control-label {
+  color: #af4fff;
+  opacity: 1;
 }
 /* Псевдокласс - :active */
 .control:active .control-label {
