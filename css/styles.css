@@ -506,12 +506,16 @@ body {
   background-color: rgba(255, 225, 127, 0.3);
 }
 /* Псевдокласс - :focus*/
-.navigation-user-item:focus-within .popover {
+/* .navigation-user-item:focus-within .popover {
   display: block;
+} */
+.popover-close-button:focus {
+  border: 2px solid #af4fff;
 }
 /* Псевдокласс - :active  */
 .popover-close-button:active {
   background-color: rgba(255, 225, 127, 0.6);
+  border: none;
 }
 /* Псевдокласс - :hover  */
 .cart-item-link:hover {
