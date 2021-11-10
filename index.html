@@ -35,9 +35,85 @@
             />
             <button class="button search-button" type="submit">Найти</button>
           </form>
-          <a class="user-navigation-link login-title" href="#">Войти</a>
-          <a class="user-navigation-link compare-title" href="#">Сравнить</a>
-          <a class="user-navigation-link basket-title" href="#">Корзина</a>
+          <ul class="navigation-user">
+            <li class="navigation-user-item">
+              <a class="user-navigation-link login-title" href="#">Войти</a>
+            </li>
+            <li class="navigation-user-item">
+              <a class="user-navigation-link compare-title" href="#"
+                >Сравнить</a
+              >
+            </li>
+            <li class="navigation-user-item">
+              <a class="user-navigation-link basket-title" href="#">Корзина</a>
+              <!-- Добавление - popover -->
+              <div class="popover popover-cart">
+                <button class="popover-button popover-close-button">
+                  <span class="visually-hidden">Закрыть</span>
+                </button>
+                <div class="popover-content">
+                  <ul class="card-list">
+                    <li class="cart-item">
+                      <a class="cart-item-link" href="#">
+                        <span class="cart-item-icon monopod-1"></span>
+                        <p class="cart-item-title">
+                          Любительская<br />
+                          селфи-палка
+                        </p>
+                      </a>
+                      <button class="cart-item-button button" type="button">
+                        <svg
+                          class="delete-item"
+                          width="11"
+                          height="11"
+                          fill="#fff"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="m11 1-1-1-4.5 4.5L1 0 0 1l4.5 4.5L0 10l1 1 4.5-4.5L10 11l1-1-4.5-4.5L11 1Z"
+                          ></path>
+                        </svg>
+                        <span class="visually-hidden">Удалить из корзины</span>
+                      </button>
+                    </li>
+                    <li class="cart-item">
+                      <a class="cart-item-link" href="#">
+                        <span class="cart-item-icon monopod-2"></span>
+                        <p class="cart-item-title">
+                          Профессиональная селфи-палка
+                        </p>
+                      </a>
+                      <button class="cart-item-button button" type="button">
+                        <svg
+                          class="delete-item"
+                          width="11"
+                          height="11"
+                          fill="#fff"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="m11 1-1-1-4.5 4.5L1 0 0 1l4.5 4.5L0 10l1 1 4.5-4.5L10 11l1-1-4.5-4.5L11 1Z"
+                          ></path>
+                        </svg>
+                        <span class="visually-hidden">Удалить из корзины</span>
+                      </button>
+                    </li>
+                  </ul>
+                  <div class="card-total">
+                    <p class="card-total-number">Товаров: 2</p>
+                    <p class="card-total-price">Сумма: 2000 ₽</p>
+                  </div>
+                  <a class="cart-button-open button" href="#">
+                    <span class="button-open-title">Открыть корзину</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
         <nav class="main-navigation">
           <ul class="main-navigation-list">
@@ -45,30 +121,28 @@
               <a class="main-navigation-link catalog-title" href="catalog.html"
                 >Каталог товаров
               </a>
-              <div class="subcatalog-container">
-                <ul class="subcatalog-list">
-                  <li class="subcatalog-item virtual-reality-item">
-                    <a class="subcatalog-link" href="#"
-                      >Виртуальная реальность</a
-                    >
-                  </li>
-                  <li class="subcatalog-item monopods-item">
-                    <a class="subcatalog-link" href="#">Моноподы для cелфи</a>
-                  </li>
-                  <li class="subcatalog-item action-cameras-item">
-                    <a class="subcatalog-link" href="#">Экшн-камеры</a>
-                  </li>
-                  <li class="subcatalog-item fitness-bracelets-item">
-                    <a class="subcatalog-link" href="#">Фитнес-браслеты</a>
-                  </li>
-                  <li class="subcatalog-item smart-watches-item">
-                    <a class="subcatalog-link" href="#">Умные часы</a>
-                  </li>
-                  <li class="subcatalog-item quadrocopters-item">
-                    <a class="subcatalog-link" href="#">Квадрокоптеры</a>
-                  </li>
-                </ul>
-              </div>
+              <ul class="subcatalog-list">
+                <li class="subcatalog-item virtual-reality-item">
+                  <a class="subcatalog-link" href="#">Виртуальная реальность</a>
+                </li>
+                <li class="subcatalog-item monopods-item">
+                  <a class="subcatalog-link" href="#">Моноподы для cелфи</a>
+                </li>
+                <li class="subcatalog-item action-cameras-item">
+                  <a class="subcatalog-link" href="#">Экшн-камеры</a>
+                </li>
+                <li class="subcatalog-item fitness-bracelets-item">
+                  <a class="subcatalog-link" href="#">Фитнес-браслеты</a>
+                </li>
+                <li class="subcatalog-item smart-watches-item">
+                  <a class="subcatalog-link" href="#">Умные часы</a>
+                </li>
+                <li class="subcatalog-item quadrocopters-item">
+                  <a class="subcatalog-link quadrocopters-title" href="#"
+                    >Квадрокоптеры</a
+                  >
+                </li>
+              </ul>
             </li>
             <li class="main-navigation-item delivery-item">
               <a class="main-navigation-link delivery-title" href="#"
@@ -96,15 +170,9 @@
         <h1 class="visually-hidden">Интернет магазин "Device"</h1>
 
         <!-- Слайдер -->
-        <section class="slider">
-          <div class="slider-column-left">
-            <h2 class="visually-hidden">Карусель товаров</h2>
-            <img
-              class="slider-image"
-              src="img/first-slider.png"
-              width="560"
-              alt="Пример товара"
-            />
+        <section class="carousel">
+          <h2 class="visually-hidden">Карусель товаров</h2>
+          <div class="carousel-navigation-arrows">
             <button class="slider-button slider-prev">
               <span class="visually-hidden">Предыдущее фото</span>
             </button>
@@ -112,52 +180,143 @@
               <span class="visually-hidden">Следующее фото</span>
             </button>
           </div>
-          <div class="slider-column-right">
-            <ol class="slider-text-list">
-              <li class="slider-text-item">
-                <p class="slider-slogan">
-                  Порхает как бабочка, жалит как пчела!
-                </p>
-                <p class="slider-text">
-                  Этот обычный, на первый взгляд, квадрокоптер оснащен мощным
-                  лазером, замаскированным под стандартную камеру.
-                </p>
-                <div class="detailed">
-                  <a class="button detailed-button" href="#">Подробнее</a>
-                  <ul class="slider-pagination-list">
-                    <li class="slider-pagination-item">
-                      <button
-                        class="pagination-button pagination-button-current"
-                        type="button"
-                      >
-                        <span class="visually-hidden">1 фото</span>
-                      </button>
-                    </li>
-                    <li class="slider-pagination-item">
-                      <button class="pagination-button" type="button">
-                        <span class="visually-hidden">2 фото</span>
-                      </button>
-                    </li>
-                    <li class="slider-pagination-item">
-                      <button class="pagination-button" type="button">
-                        <span class="visually-hidden">3 фото</span>
-                      </button>
-                    </li>
-                  </ul>
+          <ol class="carousel-list">
+            <li class="carousel-item">
+              <section class="slider">
+                <div class="container-background"></div>
+                <div class="slider-column-left">
+                  <img
+                    class="slider-image"
+                    src="img/slider/quadrocopter.png"
+                    width="560"
+                    alt="Пример товара"
+                  />
                 </div>
-                <table class="characteristic-product">
-                  <tr class="product-row-title">
-                    <td>800 м</td>
-                    <td>50 м</td>
-                  </tr>
-                  <tr class="product-row-data">
-                    <td>Дальность полета</td>
-                    <td>Радиус поражения</td>
-                  </tr>
-                </table>
-              </li>
-            </ol>
-          </div>
+                <div class="slider-column-right">
+                  <ol class="slider-text-list">
+                    <li class="slider-text-item">
+                      <p class="slider-slogan">
+                        Порхает как бабочка, жалит как пчела!
+                      </p>
+                      <p class="slider-text">
+                        Этот обычный, на первый взгляд, квадрокоптер оснащен
+                        мощным лазером, замаскированным под стандартную камеру.
+                      </p>
+                      <div class="detailed">
+                        <a class="button detailed-button" href="#">Подробнее</a>
+                      </div>
+                      <table class="characteristic-product">
+                        <tr class="product-row-title">
+                          <td>800 м</td>
+                          <td>50 м</td>
+                        </tr>
+                        <tr class="product-row-data">
+                          <td>Дальность полета</td>
+                          <td>Радиус поражения</td>
+                        </tr>
+                      </table>
+                    </li>
+                  </ol>
+                </div>
+              </section>
+            </li>
+            <li class="carousel-item">
+              <section class="slider slider-fitness-bracelet">
+                <div class="container-background"></div>
+                <div class="slider-column-left">
+                  <img
+                    class="slider-image"
+                    src="img/slider/fitness-bracelet.png"
+                    width="560"
+                    alt="Пример товара"
+                  />
+                </div>
+                <div class="slider-column-right">
+                  <ol class="slider-text-list">
+                    <li class="slider-text-item fitbracelet-item">
+                      <p class="slider-slogan">Худеем<br />правильно!</p>
+                      <p class="slider-text">
+                        Мотивирующие фитнес-браслеты помогут найти в себе силы
+                        не пропускать занятия и соблюдать диету.
+                      </p>
+                      <div class="detailed">
+                        <a class="button detailed-button" href="#">Подробнее</a>
+                      </div>
+                      <table class="characteristic-product">
+                        <tr class="product-row-title">
+                          <td>48 часов</td>
+                        </tr>
+                        <tr class="product-row-data">
+                          <td>Без подзарядки</td>
+                        </tr>
+                      </table>
+                    </li>
+                  </ol>
+                </div>
+              </section>
+            </li>
+            <li class="carousel-item">
+              <section class="slider slider-monopod">
+                <div class="container-background"></div>
+                <div class="slider-column-left">
+                  <img
+                    class="slider-image"
+                    src="img/slider/monopod.png"
+                    width="560"
+                    alt="Пример товара"
+                  />
+                </div>
+                <div class="slider-column-right">
+                  <ol class="slider-text-list">
+                    <li class="slider-text-item monopod-item">
+                      <p class="slider-slogan">
+                        Делай селфи,<br />как Бен Стиллер!
+                      </p>
+                      <p class="slider-text">
+                        Самая длинная палка для селфи доступна в нашем магазине.
+                        Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.
+                      </p>
+                      <div class="detailed">
+                        <a class="button detailed-button" href="#">Подробнее</a>
+                      </div>
+                      <table class="characteristic-product">
+                        <tr class="product-row-title">
+                          <td>8,5 м</td>
+                          <td>5 кг</td>
+                          <td>Карбон</td>
+                        </tr>
+                        <tr class="product-row-data">
+                          <td>Длина палки</td>
+                          <td>Вес палки</td>
+                          <td>Материал</td>
+                        </tr>
+                      </table>
+                    </li>
+                  </ol>
+                </div>
+              </section>
+            </li>
+          </ol>
+          <ul class="slider-pagination-list">
+            <li class="slider-pagination-item">
+              <button
+                class="pagination-button pagination-button-current"
+                type="button"
+              >
+                <span class="visually-hidden">1 фото</span>
+              </button>
+            </li>
+            <li class="slider-pagination-item">
+              <button class="pagination-button" type="button">
+                <span class="visually-hidden">2 фото</span>
+              </button>
+            </li>
+            <li class="slider-pagination-item">
+              <button class="pagination-button" type="button">
+                <span class="visually-hidden">3 фото</span>
+              </button>
+            </li>
+          </ul>
         </section>
 
         <!-- Категории -->
