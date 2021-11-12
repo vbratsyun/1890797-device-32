@@ -2919,6 +2919,7 @@ body {
   height: 100%;
   background: rgba(240, 240, 240, 0.9);
   z-index: 4;
+  display: none;
 }
 
 .modal {
