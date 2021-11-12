@@ -25,15 +25,29 @@
             action="http://echo.htmlacademy.ru"
             method="get"
           >
+            <svg
+              class="search-icon"
+              aria-hidden="true"
+              focusable="false"
+              width="16"
+              height="16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m15.7 14.3-3.1-3.1C13.5 10 14 8.6 14 7c0-3.9-3.1-7-7-7S0 3.1 0 7s3.1 7 7 7c1.6 0 3-.5 4.2-1.4l3.1 3.1c.2.2.4.3.7.3.6 0 1-.4 1-1 0-.2-.1-.5-.3-.7ZM2 7c0-2.8 2.2-5 5-5s5 2.2 5 5-2.2 5-5 5-5-2.2-5-5Z"
+                fill="#000"
+              />
+            </svg>
             <label class="visually-hidden" for="search">Поисковое поле</label>
             <input
-              class="search-input search-placeholder"
+              class="search-input search-status"
               type="text"
               name="search-input"
               id="search"
               placeholder="Поиск по сайту"
             />
-            <button class="button search-button" type="submit">Найти</button>
+            <button class="search-button" type="submit">Найти</button>
           </form>
           <ul class="navigation-user">
             <li class="navigation-user-item">
@@ -671,9 +685,114 @@
         </section>
       </div>
     </footer>
-    <script
+    <!-- Модальное окно -->
+    <!-- <div class="modal-container">
+      <div class="modal modal-auth">
+        <button class="modal-close-button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Доставка под заказ</h2>
+          <form
+            class="auht-form"
+            action="http://echo.htmlacademy.ru"
+            method="post"
+          >
+            <div class="auht-form-container">
+              <div class="field-group cell-one">
+                <label class="label-text" for="login-name">Ваше имя:</label>
+                <div class="input-container input-container-login">
+                  <input
+                    class="input-container-style input-error"
+                    type="text"
+                    name="login-name"
+                    id="login-name"
+                    placeholder="Имя Фамилия"
+                  />
+                  <p class="input-comment login-comment">
+                    Пожалуйста, представьтесь
+                  </p>
+                </div>
+              </div>
+              <div class="field-group cell-two">
+                <label class="label-text" for="email">Ваш e-mail:</label>
+                <div class="input-container input-container-email">
+                  <input
+                    class="input-container-style input-error"
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="krasotka92@mail.ru"
+                    required
+                  />
+                  <p class="input-comment email-comment">
+                    Забавный у вас адрес
+                  </p>
+                </div>
+              </div>
+              <div class="field-group cell-three">
+                <label class="label-text" for="delivery"
+                  >Что нужно привезти:</label
+                >
+                <div class="input-container">
+                  <input
+                    class="input-container-style input-error"
+                    type="text"
+                    name="delivery"
+                    id="delivery"
+                    placeholder="В свободной форме"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="field-group cell-four">
+                <div class="label-quantity-container">
+                  <label class="label-text label-quantity" for="quantity"
+                    >Количество:</label
+                  >
+                  <div class="modal-info-icon">
+                    <button class="info" type="button">
+                      <span class="visually-hidden"
+                        >Посмотреть дополнитульную информацию</span
+                      >
+                    </button>
+                    <div class="modal-tooltip-text">
+                      Постараемся найти, сколько нужно. Привезём сколько
+                      получится по требованиям<br />к провозу багажа.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="input-container">
+                  <input
+                    class="
+                      input-container-style input-quantity-container input-error
+                    "
+                    type="number"
+                    name="quantity"
+                    id="quantity"
+                    value="1"
+                    required
+                  />
+                  <button class="range-quantity quantity-minus" type="button">
+                    <span class="visually-hidden">Уменьшить количество</span>
+                  </button>
+                  <button class="range-quantity quantity-plus" type="button">
+                    <span class="visually-hidden">Увеличить количество</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <button class="button appoinment-submit" type="submit">
+              <span class="appoinment-submit-title">Отправить</span>
+            </button>
+          </form>
+        </section>
+      </div>
+    </div> -->
+    <!-- <script
       async
       src="//pixel-perfect.org/service/script.js?guid=10933352991992de246b8aec3a5b7b8e"
-    ></script>
+    ></script> -->
   </body>
 </html>
