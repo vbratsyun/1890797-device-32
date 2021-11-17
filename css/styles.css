@@ -1242,6 +1242,7 @@ img {
   position: relative;
   top: -16px;
   padding-bottom: 30px;
+  max-width: 497px;
 }
 
 .services-content-delivery::after {
